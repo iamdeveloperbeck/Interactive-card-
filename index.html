@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="container flex-wrap">
+      <div class="cards">
+        <div class="wrapper">
+          <div class="card card-front">
+            <div class="card-wrapper">
+              <div class="card-icons">
+                <span class="white-circle"></span>
+                <span class="transparent-circle"></span>
+              </div>
+              <div class="card-number">
+                <p class="card-text card-number-text card_number_text">
+                  0000 0000 0000 0000
+                </p>
+              </div>
+              <div class="card-info-wrapper">
+                <div class="card-info">
+                  <div class="card-info-item">
+                    <p class="card-text little-text card_name_text">
+                      Jane Appleseed
+                    </p>
+                  </div>
+                  <div class="card-info-item">
+                    <p class="card-text card-info-text ">
+                      <span class="card_month_text">00</span>/<span class="card_year_text">00</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card card-back">
+            <div class="card-back-text">
+              <p class="card-text little-text card-code-text card_code_text">
+                000
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form">
+        <form action="/" id="form" method="pos`t">
+          <div class="to-toggle ">
+            <div class="wrap">
+              <div class="form-item">
+                <label for="name" class="input-label little-text">Cardholder Name</label>
+                <input type="text" name="name" data-input="card_name_text" id="name" class="input-field" placeholder="e.g. Jane Appleseed" data-base="Jane Appleseed" data-length="30" pattern="\b([A-Za-z]+[ A-Za-z]*)+">
+              </div>
+              <span class="input-error">Wrong format! Check your input.</span>
+            </div>
+            <div class="wrap">
+              <div class="form-item ">
+                <label for="number" class="input-label little-text">Card Number</label>
+                <input type="text" name="number" id="number" data-input="card_number_text" class="input-field" placeholder="e.g. 1234 5678 9123 0000" data-base="0000 0000 0000 0000" data-length="19" pattern="[0-9]{4}[ 0-9]{5}[ 0-9]{5}[ 0-9]{5}">
+              </div>
+              <span class="input-error">Wrong format! Check your input.</span>
+            </div>
+            <div class="form-item-wrapper wrap flex-wrap">
+              <div class="form-item dates">
+                <label for="month" class="input-label little-text">Exp. Date (MM/YY)</label>
+                <div class="input-wrapper flex-wrap">
+                    <input type="number" data-input="card_month_text" name="month" id="month" class="input-field input-item" placeholder="MM" data-base="00" data-length="2" pattern="0[1-9]|1[0-2]">
+                    <input type="number" data-input="card_year_text" name="year" id="year" class="input-field input-item" placeholder="YY" data-base="00" data-length="2" pattern="[0-9]{2}">
+                </div>
+                <span class="input-error">Wrong format! Check your input.</span>
+              </div>
+              <div class="padding">
+                <div class="form-item cvc">
+                  <label for="cvc" class="input-label little-text">CVC</label>
+                  <input type="number" data-input="card_code_text" name="cvc" id="cvc" class="input-field" placeholder="e.g. 123" data-base="000" data-length="3" pattern="[0-9]{3}"> 
+                </div>
+                <span class="input-error">Wrong format! Check your input.</span>
+              </div>
+            </div>
+          </div>
+          <div class="to-toggle centered not-displayed">
+            <div class="icon">
+              <svg class="icon-checkmark" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px"><path fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3" d="M4 16L11 23 27 7"/></svg>
+            </div>
+            <h2 class="complete-header">Thank you!</h2>
+            <p class="complete-text">We've added your card details.</p>
+          </div>
+          <div class="form-item">
+            <div class="button-wrapper">
+              <button class="button" data-text="Continue">
+                Confirm
+              </button>
+              <span class="input-error">Please fill all the information correctly! You can't submit empty or wrong info!</span>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div> 
+  </main> 
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Beck Sattorov</a>.
+  </div>  -->
+  
+  <script src="style.js"></script> 
+</body>
+</html>
